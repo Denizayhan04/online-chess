@@ -46,7 +46,7 @@ npm start
 
 2. Size verilen oda numarasını arkadaşınızla paylaşın.
 
-3. Arkadaşınız ana sayfada "Oyuna Katıl" bölümünden oda numarasını girerek oyuna katılabilir.
+3. Arkadaşınız ana sayfada "Oyuna Katıl" bölümünden oda numarasını girerek oyuna katılabilir. (Url'yi paylaşmayın token kişiye özeldir)
 
 4. Oyun başladığında:
    - Sıra sizdeyken taşları sürükleyip bırakarak hamle yapabilirsiniz
