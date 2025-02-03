@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Satranç</title>
+    <link rel="stylesheet" href="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="gameSetup" class="setup-container">
+            <h2>Yeni Oyun Oluştur</h2>
+            <div class="setup-options">
+                <div class="time-control">
+                    <label>Süre (dakika):</label>
+                    <select id="timeControl">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+                <div class="color-selection">
+                    <label>Renk Seçimi:</label>
+                    <select id="colorChoice">
+                        <option value="white">Beyaz</option>
+                        <option value="black">Siyah</option>
+                        <option value="random">Rastgele</option>
+                    </select>
+                </div>
+                <button id="createGame">Oyun Oluştur</button>
+            </div>
+            <div class="join-game">
+                <input type="text" id="roomId" placeholder="Oda Numarası">
+                <button id="joinGame">Oyuna Katıl</button>
+            </div>
+        </div>
+
+        <div id="gameArea" class="game-container" style="display: none;">
+            <div class="timer-container">
+                <div id="opponent-timer" class="timer"></div>
+                <div id="player-timer" class="timer"></div>
+            </div>
+            <div class="board-container">
+                <div id="board"></div>
+                <div id="moveHistory" class="move-history">
+                    <h3>Hamle Geçmişi</h3>
+                    <div id="moves"></div>
+                </div>
+            </div>
+            <div class="game-info">
+                <p>Oda Numarası: <span id="roomDisplay"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script src="https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html> 
